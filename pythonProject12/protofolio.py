@@ -3,11 +3,11 @@ import base64
 
 st.set_page_config(page_title="Jana's Portfolio", layout="wide")
 
-# -------- Sidebar Navigation --------
+
 st.sidebar.title("📂 Navigation")
 page = st.sidebar.radio("Go to:", ["About Me", "Projects", "Certifications", "Contact"])
 
-# -------- About Me --------
+
 if page == "About Me":
     st.title("👋 Hello, I'm Jana")
     st.subheader("📊 Data Analyst | 🐍 Python Developer | 💡 Creative Thinker")
@@ -31,7 +31,7 @@ if page == "About Me":
     - **Other:** APIs, GitHub, Problem-Solving  
     """)
 
-# -------- Projects --------
+
 elif page == "Projects":
     st.title("📁 Projects")
 
@@ -48,12 +48,12 @@ elif page == "Projects":
     st.subheader("📝 To-Do List")
     st.write("A simple To-Do List app built with Python.")
     st.markdown("[🔗 View on GitHub](https://github.com/janaelshabrawy17/To-do-list)")
-# -------- Certifications --------
+
 elif page == "Certifications":
     st.title("🎓 Certifications")
     st.markdown("✅ Directions Program with EFE-Egypt")
 
-    # PDF Viewer
+  
     def display_pdf(file_path):
         import base64
         with open(file_path, "rb") as f:
@@ -61,10 +61,10 @@ elif page == "Certifications":
             pdf_display = f'<iframe src="data:application/pdf;base64,{base64_pdf}" width="700" height="1000" type="application/pdf"></iframe>'
             st.markdown(pdf_display, unsafe_allow_html=True)
 
-    # Use your uploaded certificate file
+  
     display_pdf("Jana El-Shabrawy (1).pdf")
 
-    # Download button
+    
     with open("Jana El-Shabrawy (1).pdf", "rb") as file:
         st.download_button(
             label="⬇️ Download My Certificate (PDF)",
@@ -80,3 +80,4 @@ elif page == "Contact":
     - 💼 [LinkedIn](https://www.linkedin.com/in/janamelshabrawy17)  
     - 💻 [GitHub](https://github.com/janaelshabrawy17)  
     """)
+
